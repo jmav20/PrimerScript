@@ -2,6 +2,12 @@ class Factura{
     constructor(Cliente,Elementos){
         this.Cliente = Cliente;
         this.Elementos = Elementos;
+        this.informacion  =  {
+            baseImponible : 0 ,
+            iva : 21 ,
+            total : 0 ,
+            formaPago : "contado"
+          } ;
     }
 
     Calculo(){
@@ -12,6 +18,8 @@ class Factura{
             Base_Imponible += this.linea.cantidad * this.linea.precio;
         }
         Total = Base_Imponible + ((Base_Imponible * 16)/100)
+        this.informacion.baseImponible = Base_Imponible
+        this.informacion.total = Base_Imponible
         alert("Base Imponible" + Base_Imponible + "\n" + "Total:"+ Total)
     }
 }
