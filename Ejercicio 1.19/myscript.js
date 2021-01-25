@@ -18,10 +18,12 @@ function cambio_color_foco2(){
 
 document.getElementById("texto2").addEventListener ("keypress", cambio_color_tecla);
 
-function cambio_color_tecla(){
-    var tecla= String.fromCharCode(Event.charCode)
-    if(tecla == 'a' || tecla == 'e' || tecla == 'i' || tecla == 'o' || tecla == 'u' ){
-    document.getElementById("texto2").style.backgroundColor = "orange";}
+function cambio_color_tecla(evento){
+    const  currentLetter  =  evento.key;
+    //var tecla= String.fromCharCode(codigo)
+    //if(tecla == 'a' || tecla == 'e' || tecla == 'i' || tecla == 'o' || tecla == 'u' ){
+    if  ( currentLetter  == 'a'  ||  currentLetter  ==  'e'  ||  currentLetter  ==  'i'  ||  currentLetter  ==  'o'  ||  currentLetter  ==  'u' ) {
+        document.getElementById("texto2").style.backgroundColor = "orange";}
     else{
         document.getElementById("texto2").style.backgroundColor = "red";
     }
