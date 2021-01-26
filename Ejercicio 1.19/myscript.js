@@ -20,7 +20,7 @@ document.getElementById("texto2").addEventListener ("keypress", cambio_color_tec
 
 function cambio_color_tecla(evento){
     const  letra  =  evento.key;
-    if  ( letra  == 'a'  ||  letra  ==  'e'  ||  letra  ==  'i'  ||  letra  ==  'o'  ||  letra  ==  'u' ) {
+    if  ( letra  == 'a'  || letra  == 'A'  ||  letra  ==  'e'  || letra  == 'E'  ||  letra  ==  'i' ||  letra  ==  'I' ||   letra  ==  'o'  ||   letra  ==  'O' ||  letra  ==  'u' ||  letra  ==  'U') {
         document.getElementById("texto2").style.backgroundColor = "orange";}
     else{
         document.getElementById("texto2").style.backgroundColor = "red";
